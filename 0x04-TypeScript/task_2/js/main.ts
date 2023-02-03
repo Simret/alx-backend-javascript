@@ -24,7 +24,3 @@ export class Teacher implements TeacherInterface {
 }
 
 export const createEmployee = (salary: number | string): Teacher | Director => Number(salary) < 500 ? new Teacher() : new Director()
-
-export function isDirector(employee: TeacherInterface | DirectorInterface): employee is Director {
-  return (employee as Director).workDirectorTasks !== undefined;
-}
