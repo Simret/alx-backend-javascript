@@ -43,3 +43,6 @@ export class StudentClass implements IStudentClass {
     return this._firstName;
   }
 }
+export function createStudent(ctor: IStudentClassConstructor, firstName: string, lastName: string): IStudentClass {
+  return new ctor(firstName, lastName);
+}
